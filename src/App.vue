@@ -6,16 +6,16 @@ import { reactive } from 'vue';
 
 
 const estado = reactive({
-    number1: '',
-    number2: '',
+    number1: 0,
+    number2: 0,
     calculo: 'adicao',
-    resultado: '',
+    resultado: 0,
 })
 
 const adicao = () => {
     const resultadoAdicao = estado.number1 + estado.number2
     estado.resultado = resultadoAdicao;
-    return estado.resultado;
+    return estado.resultado
 }
 
 const subtracao = () => {
@@ -46,8 +46,3 @@ const divisao = () => {
     </div>
 
 </template>
-
-<style scoped>
-
-
-</style>

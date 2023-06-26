@@ -1,4 +1,4 @@
-<script>
+<script setup>
 const props = defineProps(['selecioneCalculo', 'funcaoAdicao', 'funcaoSubtracao', 'funcaoMultiplicacao', 'funcaoDivisao'])
 </script>
 
