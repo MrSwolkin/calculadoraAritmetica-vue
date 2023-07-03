@@ -6,8 +6,8 @@ import { reactive } from 'vue';
 
 
 const estado = reactive({
-    number1: Number(''),
-    number2: Number(''),
+    number1: 0,
+    number2: 0,
     calculo: 'adicao',
     resultado: '',
 })
@@ -42,7 +42,10 @@ const divisao = () => {
 <template>
     <div class="container">
         <Cabecalho/>
-        <Formulario :primeiroNumber="evento => estado.number1 = evento.target.value" :segundoNumber="evento => estado.number2 = evento.target.value" :selecioneCalculo="evento => estado.calculo = evento.target.value"/>
+        <Formulario 
+            :primeiroNumber="evento => estado.number1 = Number (evento.target.value)" 
+            :segundoNumber="evento => estado.number2 = Number (evento.target.value)" 
+            :selecioneCalculo="evento => estado.calculo = evento.target.value"/>
         <Resultado :selecioneCalculo="estado.calculo" :funcaoAdicao="adicao()" :funcaoSubtracao="subtracao()" :funcaoMultiplicacao="multiplicacao()" :funcaoDivisao="divisao()"/>
     </div>
 </template>
